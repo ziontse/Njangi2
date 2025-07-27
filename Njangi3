@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Number Link</title>
+  <script>
+    function generateAndSend() {
+      const number = Math.floor(Math.random() * 12) + 1;
+      const msg = `Random Number: ${number}`;
+      const wa = `https://wa.me/?text=${encodeURIComponent(msg)}`;
+      window.location.href = wa;
+    }
+  </script>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 2em;
+    }
+    a {
+      display: inline-block;
+      padding: 1em 2em;
+      background: #25D366;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <h2>🎲 Tap to Send a Random Number</h2>
+  <a href="#" onclick="generateAndSend()">Generate & Share on WhatsApp</a>
+</body>
+</html>
